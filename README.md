@@ -2,7 +2,7 @@
 
 [File Viewer](https://github.com/flyfish-dev/file-viewer) (Apache-2.0) — a browser-side preview site for 200+ file formats (Word, Excel, PowerPoint, PDF/OFD, CAD, 3D models, images, archives, code and more) plus document compare and an iframe embed mode. Files are rendered in the visitor's browser; no files are uploaded to the server. Deploy it on Railway with one click.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/PLACEHOLDER)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/NTE6fW)
 
 ## What this template runs
 

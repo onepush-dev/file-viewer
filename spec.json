@@ -1,0 +1,14 @@
+{
+ "slug":"file-viewer","name":"File Viewer","backlog_name":"File Viewer","code":"NTE6fW","tid":"3129eae3-3096-4471-bc34-52f3ac53c93b",
+ "upstream":"https://github.com/flyfish-dev/file-viewer (Apache-2.0; optional DWG/DWF runtime AGPL-3.0), flyfishdev/file-viewer:3.3.4",
+ "services":[{"name":"file-viewer","image":"ghcr.io/onepush-dev/file-viewer:3.3.4","port":8080,"volume":null,"healthcheck":"/","restart":"ALWAYS (10)","public":true}],
+ "env_vars":{"file-viewer":{}},
+ "baked_env":{},
+ "var_descriptions":{},
+ "title":"File Viewer (Preview 200+ File Formats)","short_desc":"Browser-side previewer for Office, PDF, CAD and 3D files","category":"Other",
+ "icon_note":"mdi/file-eye-outline (neutral; upstream logo reuse not checked)",
+ "service_icons":{"file-viewer":"https://api.iconify.design/mdi/file-eye-outline.svg"},
+ "angle":"A self-hosted universal file previewer: Word, Excel, PowerPoint, PDF/OFD, CAD, 3D models, images, archives and code rendered entirely in the visitor's browser, plus a document-compare page and an iframe embed mode for your own apps. Static nginx, no database, no variables, no conversion backend - the lightest template of the batch (zero inputs).",
+ "notes":"Official flyfishdev/file-viewer:3.3.4 image; only change is nginx listen 80 -> 8080 (IPv4+IPv6) via sed in a wrapper Dockerfile (build fails if the sed doesn't match). No variables at all, so var-descriptions JSON is empty. Healthcheck path / (the upstream /healthz returns 204, which Railway doesn't count). Files are processed client-side, nothing is uploaded; the demo has no access control. Optional DWG/DWF CAD runtime upstream is AGPL-3.0. Not affiliated with File Viewer.",
+ "fresh_test":"Built + FRESH-TEST PASSED Nov 20 ~11:10 AM IST: test-file-viewer from NTE6fW (single service, no variables) deployed first try with no inputs; / 200 (index 6,960 bytes), /compare.html 200, /iframe.html 200, /example/word.docx 200 (633,700 bytes), JS asset served as application/javascript, /healthz 204. (A follow-up redeploy was still in DEPLOYING when the test projects were purged; the static site served 200 throughout, and the first deploy and the build-project deploy both succeeded.)"
+}
